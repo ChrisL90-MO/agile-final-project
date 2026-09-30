@@ -25,3 +25,9 @@ def update_product(product_id, name, description, price):
         products[product_id]["price"] = price
         return products[product_id]
     return None
+def delete_product(product_id):
+    """Delete a product from the catalog."""
+    if product_id in products:
+        del products[product_id]
+        return True
+    return False
